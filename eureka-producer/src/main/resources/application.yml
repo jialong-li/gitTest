@@ -1,0 +1,13 @@
+#通过改变主机名和端口号可模拟集群，每台注册中心分别又指向其它两个节点。
+spring:
+  application:
+    name: eureka-producer
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/   #多地址用逗号隔开
+server:
+  port: 8100
+

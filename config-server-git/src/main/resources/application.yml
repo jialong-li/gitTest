@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jialong-li/spring-cloud-study.git # 配置git仓库的地址
+          search-paths: config-repo # git仓库地址下的相对地址，可以配置多个用,分割。
+
+server:
+  port: 12000
+
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:8000/eureka/

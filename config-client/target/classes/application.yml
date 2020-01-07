@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-git
+server:
+  port: 13000
+#开启更新机制  http://localhost:13000/actuator/refresh 手动刷新
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
